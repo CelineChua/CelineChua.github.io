@@ -1,0 +1,121 @@
+<html>
+  <head>
+    <title>My Page</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <link href="cover.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Celine's Resume</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li id="navHomeTab"><a href="#" onclick="goToHome()"><i class="fa fa-home" aria-hidden="true"></i>Home</a></li>
+                  <li id="navSkillsTab"><a href="#"><a href="#" onclick="goToSkills()"><i class="fa fa-bolt" aria-hidden="true"></i>Features</a></li>
+                  <li id="navContactTab"><a href="#"><a href="#" onclick="goToContact()"><i class="fa fa-address-card" aria-hidden="true"></i>Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover" id="home">
+            <h1 class="cover-heading">Biography</h1>
+
+          <img src="https://goo.gl/jasfpc" alt="Go find the cake !" class="img-responsive img-circle center-block">
+
+            <p class="lead">Currently a year 1 student pursuing a degree in Information Systems at SMU. I like music and sports. Hook me up for a game in badminton,swimming or simply jamming of instruments.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default"><i class="fa fa-picture-o" aria-hidden="true"></i>Pictures</a>
+            </p>
+          </div>
+
+          <div class="inner cover" id="skills">
+            <h1 class="cover-heading">Skils accquired</h1>
+            <table>
+              <tr>
+                <td>
+                    <p class="lead">1.Java</p><br />
+                    <p class="lead">2.MS Office</p><br />
+                    <p class="lead">3.VBA</p><br />
+                    <p class="lead">4.SQL</p><br />
+
+                </td>
+              </tr>
+            </table>
+
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default"><i class="fa fa-file-archive-o" aria-hidden="true"></i>Certificates</a>
+            </p>
+          </div>
+
+          <div class="inner cover" id="contacts">
+            <h1 class="cover-heading">This is my contact.</h1>
+            <p class="lead">Number: 90999099 <br> Email: celineusingbootstrap@gmail.com <br /> LinkIn: celinechua/smu/2016 </p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default"><i class="fa fa-phone-square" aria-hidden="true"></i>Call Now</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+
+
+
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <script>
+    //Run whatever that is inside this function when the page loads
+    $(function(){
+      $("#skills").hide()
+      $("#contacts").hide()
+    })
+    function goToHome(){
+      $("#home").slideDown()
+      $("#skills").hide()
+      $("#contacts").hide()
+      $("#navHomeTab").attr('class', 'active');
+      $("#navSkillsTab").attr('class', '');
+      $("#navContactTab").attr('class', '');
+    }
+    function goToSkills(){
+        $("#home").hide()
+        $("#contacts").hide()
+        $("#skills").slideDown()
+        $("#navHomeTab").attr('class', '');
+        $("#navSkillsTab").attr('class', 'active');
+        $("#navContactTab").attr('class', '');
+    }
+
+    function goToContact(){
+        $("#home").hide()
+        $("#skills").hide()
+        $("#contacts").slideDown()
+        $("#navHomeTab").attr('class', '');
+        $("#navSkillsTab").attr('class', '');
+        $("#navContactTab").attr('class', 'active');
+    }
+    </script>
+  </body>
+
+
+</html>
